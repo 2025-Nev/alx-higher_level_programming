@@ -10,8 +10,6 @@ def print_matrix_integer(matrix=[[]]):
 
             length = len(elems)
 
-
-
             for elem in elems:
 
                 if i == length:
@@ -21,9 +19,6 @@ def print_matrix_integer(matrix=[[]]):
                 else:
 
                     print('{:d}'.format(elem), end=' ')
-
                 i += 1
-
-
 
             print()
