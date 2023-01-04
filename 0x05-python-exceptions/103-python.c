@@ -15,14 +15,17 @@ void print_python_list(PyObject *p)
 	PyListObject *list = (PyListObject *)p;
 	PyVarObject *var = (PyVarObject *)p;
 	size = var->ob_size;
+	
 	alloc = list->allocated;
 	fflush(stdout);
+
 	printf("[*] Python list info\n");
 	if (strcmp(p->ob_type->tp_name, "list") != 0)
 	{
 		printf("  [ERROR] Invalid List Object\n");
 		return;
 	}
+
 
 	printf("[*] Size of the Python List = %ld\n", size);
 	printf("[*] Allocated = %ld\n", alloc);
@@ -55,6 +58,7 @@ void print_python_bytes(PyObject *p)
 		return;
 
 	}
+
 	printf("  size: %ld\n", ((PyVarObject *)p)->ob_size);
 	printf("  trying string: %s\n", bytes->ob_sval);
 	if (((PyVarObject *)p)->ob_size >= 10)
@@ -71,10 +75,12 @@ void print_python_bytes(PyObject *p)
 			printf(" ");
 	}
 }
+
 /**
  * print_python_float - Prints basic info about Python float objects.
  * @p: A PyObject float object.
  */
+
 void print_python_float(PyObject *p)
 {
 	char *buffer = NULL;
