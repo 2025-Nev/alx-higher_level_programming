@@ -1,3 +1,7 @@
-0x03. Python - Data Structures: Lists, Tuples
+0x0A. Python - Inheritance
 
 Python
+
+OOP
+
+Inheritance
