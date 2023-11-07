@@ -22,3 +22,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     result = (a_copy[0] + b_copy[0], a_copy[1] + b_copy[1])
 
+    return result
